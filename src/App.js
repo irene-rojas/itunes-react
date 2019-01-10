@@ -1,40 +1,41 @@
 import React, { Component } from 'react';
 import './App.css';
-import List from "./components/List";
+// import List from "./components/List";
 
 class App extends Component {
 
     state = {
-        term: "",
-        items: []
+        pictures: []
     };
 
-    onChange = (event) => {
-        this.setState({
-            term: event.target.value
-        });
-        console.log(this.state.term);
+    componentDidMount() {
+        fetch('https://randomuser.me/api/?results=2')
+        .then(results => {
+            return results.json();
+        }).then(data => {
+            let pictures = data.results.map((pic) => {
+                return (
+                    <div key={pic.results}>
+                        <img src={pic.picture.medium} 
+                            alt="person"
+                        />
+                    </div>
+                )
+            })
+            this.setState({pictures: pictures});
+            console.log("state", this.state.pictures);
+        })
     }
 
-    onSubmit = (event) => {
-        event.preventDefault();
-        this.setState({
-            term: "",
-            items: [...this.state.items, this.state.term]
-        });
-    }
 
   render() {
     return (
       <div className="App">
-        iTunes API Tests
+        Random User Tests
+        <div className="randomUserDiv">
+            {this.state.pictures}
+        </div>
 
-        <form className="form" onSubmit={this.onSubmit}>
-            <input value={this.state.term} onChange={this.onChange}></input>
-            <button>Submit</button>
-        </form>
-        
-        <List items={this.state.items} />
       </div>
     );
   }
