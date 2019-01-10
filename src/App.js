@@ -5,36 +5,37 @@ import './App.css';
 class App extends Component {
 
     state = {
-        term: "",
-        results: ""
+        pictures: []
     };
 
-    onChange = (event) => {
-        this.setState({ term: event.target.value });
-      }
+    componentDidMount() {
+        fetch('https://randomuser.me/api/?results=2')
+        .then(results => {
+            return results.json();
+        }).then(data => {
+            let pictures = data.results.map((pic) => {
+                return (
+                    <div key={pic.results}>
+                        <img src={pic.picture.medium} 
+                        alt="person"/>
+                    </div>
+                )
+            })
+            this.setState({pictures: pictures});
+            console.log("state", this.state.pictures);
+        })
+    }
 
-      handleSubmit = (event) => {
-        event.preventDefault();
-        const url = `https://itunes.apple.com/search?term=${this.state.term}`;
-        fetch(url)
-          .then(response => response.json())
-          .then(data => this.setState({ 
-              term:'', 
-              results: data.data[0].images.fixed_height.url }))
-          .catch(e => console.log('error', e));
-      }
 
   render() {
     return (
       <div className="App">
-        iTunes API Tests
-
-        <form onSubmit={this.handleSubmit}>
-          <input value={this.state.term} onChange={this.onChange} />
-          <button>Search!</button>
-        </form>
-        <img src={this.state.img} height="200" alt={this.state.term} />
+        Random User Tests
+        <div className="randomUserDiv">
+            {this.state.pictures}
+        </div>
         
+
       </div>
     );
   }
