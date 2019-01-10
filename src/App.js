@@ -34,7 +34,6 @@ class App extends Component {
         <div className="randomUserDiv">
             {this.state.pictures}
         </div>
-        
 
       </div>
     );
