@@ -17,7 +17,8 @@ class App extends Component {
                 return (
                     <div key={pic.results}>
                         <img src={pic.picture.medium} 
-                        alt="person"/>
+                            alt="person"
+                        />
                     </div>
                 )
             })
