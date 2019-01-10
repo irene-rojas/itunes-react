@@ -6,7 +6,7 @@ class App extends Component {
 
     state = {
         term: "",
-        img: ""
+        results: ""
     };
 
     onChange = (event) => {
@@ -15,11 +15,12 @@ class App extends Component {
 
       handleSubmit = (event) => {
         event.preventDefault();
-        const api_key = 'dc6zaTOxFJmzC';
-        const url = `http://api.giphy.com/v1/gifs/search?q=${this.state.term}&api_key=${api_key}`;
+        const url = `https://itunes.apple.com/search?term=${this.state.term}`;
         fetch(url)
           .then(response => response.json())
-          .then(data => this.setState({ term:'', img: data.data[0].images.fixed_height.url }))
+          .then(data => this.setState({ 
+              term:'', 
+              results: data.data[0].images.fixed_height.url }))
           .catch(e => console.log('error', e));
       }
 
