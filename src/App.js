@@ -1,25 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import List from "./components/List";
 
 class App extends Component {
+
+    state = {
+        term: "",
+        items: []
+    };
+
+    onChange = (event) => {
+        this.setState({
+            term: event.target.value
+        });
+        console.log(this.state.term);
+    }
+
+    onSubmit = (event) => {
+        event.preventDefault();
+        this.setState({
+            term: "",
+            items: [...this.state.items, this.state.term]
+        });
+    }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        iTunes API Tests
+
+        <form className="form" onSubmit={this.onSubmit}>
+            <input value={this.state.term} onChange={this.onChange}></input>
+            <button>Submit</button>
+        </form>
+        
+        <List items={this.state.items} />
       </div>
     );
   }
