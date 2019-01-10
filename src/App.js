@@ -1,42 +1,52 @@
 import React, { Component } from 'react';
 import './App.css';
-// import List from "./components/List";
+import axios from "axios";
 
 class App extends Component {
 
     state = {
-        pictures: []
+        term: "",
+        results: []
     };
 
     componentDidMount() {
-        fetch('https://randomuser.me/api/?results=2')
-        .then(results => {
-            return results.json();
-        }).then(data => {
-            let pictures = data.results.map((pic) => {
-                return (
-                    <div key={pic.results}>
-                        <img src={pic.picture.medium} 
-                            alt="person"
-                        />
-                    </div>
-                )
-            })
-            this.setState({pictures: pictures});
-            console.log("state", this.state.pictures);
-        })
+        axios.get(`https://itunes.apple.com/search?term=${this.state.term}`)
+        .then(res => {
+            const itunes = res.data;
+            this.setState({ 
+                results: itunes
+             });
+        });
+    }
+
+    onChange = (event) => {
+        this.setState({
+            term: event.target.value.replace(/ /g,"+")
+        });
+        console.log(this.state.term);
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.setState({
+            results: this.state.results
+        });
+        console.log(this.state.results);
     }
 
 
   render() {
     return (
       <div className="App">
-        Random User Tests
-        <div className="randomUserDiv">
-            {this.state.pictures}
-        </div>
+        <form onSubmit={this.handleSubmit}>
+            <input value={this.state.term} onChange={this.onChange} />
+            <button>Search!</button>
+        </form>    
 
-      </div>
+        <div>
+            {this.state.results}    
+        </div>  
+    </div>
     );
   }
 }
