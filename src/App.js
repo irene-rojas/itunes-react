@@ -7,29 +7,25 @@ class App extends Component {
     state = {
         term: "",
         results: []
+        // empty array awaiting results
     };
 
-    componentDidMount() {
-        axios.get(`https://itunes.apple.com/search?term=${this.state.term}`)
-        .then(res => {
-            const itunes = res.data;
-            this.setState({ 
-                results: itunes
-             });
-        });
-    }
-
+    // text field
     onChange = (event) => {
         this.setState({
-            term: event.target.value.replace(/ /g,"+")
+            term: event.target.value.replace(/ /g,"+"),  
         });
         console.log(this.state.term);
     }
 
+    // what are you trying to call and show?
     handleSubmit = (event) => {
         event.preventDefault();
-        this.setState({
-            results: this.state.results
+        axios.get(`https://itunes.apple.com/search?term=${this.state.term}&entity=musicTrack&limit=5`)
+        .then(res => {
+            this.setState({ 
+                results: res.data.artistName
+             });
         });
         console.log(this.state.results);
     }
@@ -38,14 +34,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <form onSubmit={this.handleSubmit}>
-            <input value={this.state.term} onChange={this.onChange} />
+            Songs by:<input value={this.state.term} onChange={this.onChange} />
             <button>Search!</button>
         </form>    
 
         <div>
-            {this.state.results}    
+            <ul>
+                <li>
+                    {this.state.term}
+                    {this.state.results}    
+                </li>
+            </ul>
         </div>  
+
     </div>
     );
   }
