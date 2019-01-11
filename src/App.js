@@ -21,7 +21,7 @@ class App extends Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        axios.get(`https://itunes.apple.com/search?term=${this.state.term}&entity=musicTrack&limit=10`)
+        axios.get(`https://itunes.apple.com/search?term=${this.state.term}&entity=musicTrack&limit=20`)
         .then(res => {
             this.setState({ 
                 results: res.data.results,

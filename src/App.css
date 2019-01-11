@@ -33,7 +33,7 @@ a:link {
 .resultsDiv {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     align-items: center;
     justify-content: center;
 }
@@ -88,5 +88,57 @@ a:link {
     grid-row: 2/3;
 }
 
+.grid10 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.grid11 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.grid12 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.grid13 {
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
+
+.grid14 {
+    grid-column: 5/6;
+    grid-row: 3/4;
+}
+
+.grid15 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.grid16 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.grid17 {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.grid18 {
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+
+.grid19 {
+    grid-column: 5/6;
+    grid-row: 4/5;
+}
+
 } 
 /* end 700px */
+
+/* <a href='https://www.freepik.com/free-vector/treble-clef-and-notes-neon-sign_3239201.htm'>Designed by Katemangostar</a> */
