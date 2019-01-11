@@ -18,16 +18,15 @@ class App extends Component {
         console.log(this.state.term);
     }
 
-    // what are you trying to call and show?
     handleSubmit = (event) => {
         event.preventDefault();
         axios.get(`https://itunes.apple.com/search?term=${this.state.term}&entity=musicTrack&limit=5`)
         .then(res => {
             this.setState({ 
-                results: res.data.trackName
+                results: res.data.results
              });
+             console.log(this.state.results);
         });
-        console.log(this.state.results);
     }
 
 
@@ -43,8 +42,10 @@ class App extends Component {
         <div>
             <ul>
                 <li>
-                    {this.state.term}
-                    {this.state.results}    
+                    Term: {this.state.term}
+                    <br></br>
+                    {this.state.results.map(result => 
+                    <li>{result.trackName}</li>)}
                 </li>
             </ul>
         </div>  
