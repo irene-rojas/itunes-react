@@ -49,7 +49,8 @@ class App extends Component {
             <div className="resultsDiv">
                 {this.state.results.map((result, index) => 
 
-                <div className={`card grid${index}`} key={result.trackId}>
+                <a href={result.trackViewUrl} target="_blank" rel="noopener noreferrer" key={index}>
+                <div className={`card grid${index} zoom`} key={result.trackId}>
                     <div>
                         <img src={result.artworkUrl100} alt="album art"/>
                         <br></br>
@@ -58,7 +59,7 @@ class App extends Component {
                         Album: {result.collectionName}
                     </div>
                 </div>
-                
+                </a>
                 )}
             </div>
         </div>  

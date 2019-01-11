@@ -3,14 +3,30 @@
   margin: 0 auto;
 }
 
+a {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+}
+
 .card {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 1rem 2rem rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 10px 20px rgba(0,0,0,0.2);
     width: 150px;
     margin: 15px;
     padding: 5px;
     background: white;
     border: 0.25px solid rgb(205, 205, 205);
     border-radius: 2px;
+}
+
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.05);
 }
 
 @media (min-width: 700px) {
