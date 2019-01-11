@@ -44,7 +44,7 @@ class App extends Component {
             <ul>
                 <li>
                     {this.state.term}
-                    {this.state.results}    
+                    {/* {this.state.results}     */}
                 </li>
             </ul>
         </div>  
