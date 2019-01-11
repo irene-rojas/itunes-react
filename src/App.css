@@ -11,6 +11,36 @@ a:link {
     text-decoration: none;
 }
 
+.formDiv {
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-self: center;
+    /* padding: 25px; */
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, auto);
+}
+
+.searchBar {
+    background: white;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 300px;
+    height: 25px;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    /* text-align: center; */
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 25px;
+    display: inline-block;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    /* opacity: 0.8; */
+}
+
 .card {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 10px 20px rgba(0,0,0,0.2);
     width: 150px;
@@ -142,3 +172,7 @@ a:link {
 /* end 700px */
 
 /* <a href='https://www.freepik.com/free-vector/treble-clef-and-notes-neon-sign_3239201.htm'>Designed by Katemangostar</a> */
+
+/* <a href='https://www.freepik.com/free-vector/retro-microphone-with-grunge-music-concept_715259.htm'>Designed by Freepik</a> */
+
+/* <a href='https://www.freepik.com/free-vector/microphone-on-a-stand_792490.htm'>Designed by Freepik</a> */

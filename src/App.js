@@ -36,15 +36,19 @@ class App extends Component {
     return (
       <div className="App">
 
-        <form onSubmit={this.onSubmit}>
-            Songs by:<input value={this.state.term} onChange={this.onChange} />
-            <button>Search!</button>
-        </form>    
+        <div className="formDiv">
+            <div className="searchBar">
+                <form onSubmit={this.onSubmit}>
+                    Songs by: <input value={this.state.term} onChange={this.onChange} /> 
+                    <button>Search!</button>
+                </form>
+            </div>   
+        </div> 
 
         <div>
-            Term: {this.state.term}
+            {/* Term: {this.state.term}
             <br></br>
-            <br></br>
+            <br></br> */}
 
             <div className="resultsDiv">
                 {this.state.results.map((result, index) => 
