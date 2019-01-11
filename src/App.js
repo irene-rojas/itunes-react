@@ -1,42 +1,55 @@
 import React, { Component } from 'react';
 import './App.css';
-// import List from "./components/List";
+import axios from "axios";
 
 class App extends Component {
 
     state = {
-        pictures: []
+        term: "",
+        results: []
+        // empty array awaiting results
     };
 
-    componentDidMount() {
-        fetch('https://randomuser.me/api/?results=2')
-        .then(results => {
-            return results.json();
-        }).then(data => {
-            let pictures = data.results.map((pic) => {
-                return (
-                    <div key={pic.results}>
-                        <img src={pic.picture.medium} 
-                            alt="person"
-                        />
-                    </div>
-                )
-            })
-            this.setState({pictures: pictures});
-            console.log("state", this.state.pictures);
-        })
+    // text field
+    onChange = (event) => {
+        this.setState({
+            term: event.target.value.replace(/ /g,"+"),  
+        });
+        console.log(this.state.term);
+    }
+
+    // what are you trying to call and show?
+    handleSubmit = (event) => {
+        event.preventDefault();
+        axios.get(`https://itunes.apple.com/search?term=${this.state.term}&entity=musicTrack&limit=5`)
+        .then(res => {
+            this.setState({ 
+                results: res.data.trackName
+             });
+        });
+        console.log(this.state.results);
     }
 
 
   render() {
     return (
       <div className="App">
-        Random User Tests
-        <div className="randomUserDiv">
-            {this.state.pictures}
-        </div>
 
-      </div>
+        <form onSubmit={this.handleSubmit}>
+            Songs by:<input value={this.state.term} onChange={this.onChange} />
+            <button>Search!</button>
+        </form>    
+
+        <div>
+            <ul>
+                <li>
+                    {this.state.term}
+                    {this.state.results}    
+                </li>
+            </ul>
+        </div>  
+
+    </div>
     );
   }
 }
