@@ -19,7 +19,7 @@ class App extends Component {
         console.log(this.state.term);
     }
 
-    handleSubmit = (event) => {
+    onSubmit = (event) => {
         event.preventDefault();
         axios.get(`https://itunes.apple.com/search?term=${this.state.term}&entity=musicTrack&limit=10`)
         .then(res => {
@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div className="App">
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.onSubmit}>
             Songs by:<input value={this.state.term} onChange={this.onChange} />
             <button>Search!</button>
         </form>    
@@ -46,9 +46,9 @@ class App extends Component {
                 Term: {this.state.term}
                 <br></br>
                 <br></br>
-                {this.state.results.map(result => 
+                {this.state.results.map((result, index) => 
 
-                <div className={`card + ${this.state.gridSpace}`} key={result.trackId}>
+                <div className={`card + ${index}`} key={result.trackId}>
                     <div>
                         <img src={result.artworkUrl100} alt="album art"/>
                         <br></br>
