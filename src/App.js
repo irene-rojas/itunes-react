@@ -6,8 +6,9 @@ class App extends Component {
 
     state = {
         term: "",
-        results: []
+        results: [],
         // empty array awaiting results
+        gridSpace: 0
     };
 
     // text field
@@ -23,7 +24,8 @@ class App extends Component {
         axios.get(`https://itunes.apple.com/search?term=${this.state.term}&entity=musicTrack&limit=10`)
         .then(res => {
             this.setState({ 
-                results: res.data.results
+                results: res.data.results,
+                gridSpace: this.state.gridSpace + 1
              });
              console.log(this.state.results);
         });
@@ -46,7 +48,7 @@ class App extends Component {
                 <br></br>
                 {this.state.results.map(result => 
 
-                <div className="card" key={result.trackId}>
+                <div className={`card + ${this.state.gridSpace}`} key={result.trackId}>
                     <div>
                         <img src={result.artworkUrl100} alt="album art"/>
                         <br></br>
