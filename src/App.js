@@ -42,13 +42,14 @@ class App extends Component {
         </form>    
 
         <div>
-            <ul>
-                Term: {this.state.term}
-                <br></br>
-                <br></br>
+            Term: {this.state.term}
+            <br></br>
+            <br></br>
+
+            <div className="resultsDiv">
                 {this.state.results.map((result, index) => 
 
-                <div className={`card + ${index}`} key={result.trackId}>
+                <div className={`card grid${index}`} key={result.trackId}>
                     <div>
                         <img src={result.artworkUrl100} alt="album art"/>
                         <br></br>
@@ -59,7 +60,7 @@ class App extends Component {
                 </div>
                 
                 )}
-            </ul>
+            </div>
         </div>  
 
     </div>
