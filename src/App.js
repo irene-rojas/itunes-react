@@ -45,14 +45,18 @@ class App extends Component {
                 <br></br>
                 <br></br>
                 {this.state.results.map(result => 
-                <div key={result.trackId}>
-                    Song: {result.trackName}
+
+                <div className="card" key={result.trackId}>
+                    <div>
+                        <img src={result.artworkUrl100} alt="album art"/>
                         <br></br>
-                    <img src={result.artworkUrl100} alt="album art"/>
-                        <br></br>
-                    Album: {result.collectionName}
-                        <hr></hr>
-                </div>)}
+                        Song: {result.trackName}
+                            <br></br>
+                        Album: {result.collectionName}
+                    </div>
+                </div>
+                
+                )}
             </ul>
         </div>  
 
