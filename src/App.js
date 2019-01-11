@@ -44,7 +44,8 @@ class App extends Component {
                 <li>
                     Term: {this.state.term}
                     <br></br>
-                    
+                    {this.state.results.map(result => 
+                    <li>{result.trackName}</li>)}
                 </li>
             </ul>
         </div>  
