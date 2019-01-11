@@ -24,10 +24,10 @@ class App extends Component {
         axios.get(`https://itunes.apple.com/search?term=${this.state.term}&entity=musicTrack&limit=5`)
         .then(res => {
             this.setState({ 
-                results: res.data.trackName
+                results: res.data.results
              });
+             console.log(this.state.results);
         });
-        console.log(this.state.results);
     }
 
 
