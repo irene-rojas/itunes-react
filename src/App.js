@@ -6,8 +6,9 @@ class App extends Component {
 
     state = {
         term: "",
-        results: []
+        results: [],
         // empty array awaiting results
+        gridSpace: 0
     };
 
     // text field
@@ -18,12 +19,13 @@ class App extends Component {
         console.log(this.state.term);
     }
 
-    handleSubmit = (event) => {
+    onSubmit = (event) => {
         event.preventDefault();
         axios.get(`https://itunes.apple.com/search?term=${this.state.term}&entity=musicTrack&limit=10`)
         .then(res => {
             this.setState({ 
-                results: res.data.results
+                results: res.data.results,
+                gridSpace: this.state.gridSpace + 1
              });
              console.log(this.state.results);
         });
@@ -34,26 +36,31 @@ class App extends Component {
     return (
       <div className="App">
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.onSubmit}>
             Songs by:<input value={this.state.term} onChange={this.onChange} />
             <button>Search!</button>
         </form>    
 
         <div>
-            <ul>
-                Term: {this.state.term}
-                <br></br>
-                <br></br>
-                {this.state.results.map(result => 
-                <div key={result.trackId}>
-                    Song: {result.trackName}
+            Term: {this.state.term}
+            <br></br>
+            <br></br>
+
+            <div className="resultsDiv">
+                {this.state.results.map((result, index) => 
+
+                <div className={`card grid${index}`} key={result.trackId}>
+                    <div>
+                        <img src={result.artworkUrl100} alt="album art"/>
                         <br></br>
-                    <img src={result.artworkUrl100} alt="album art"/>
-                        <br></br>
-                    Album: {result.collectionName}
-                        <hr></hr>
-                </div>)}
-            </ul>
+                        Song: {result.trackName}
+                            <br></br>
+                        Album: {result.collectionName}
+                    </div>
+                </div>
+                
+                )}
+            </div>
         </div>  
 
     </div>
