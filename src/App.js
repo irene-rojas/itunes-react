@@ -34,18 +34,21 @@ class App extends Component {
 
   render() {
     return (
+
+    <div className="parallax">
+
       <div className="App">
 
-        <form onSubmit={this.onSubmit}>
-            Songs by:<input value={this.state.term} onChange={this.onChange} />
-            <button>Search!</button>
-        </form>    
+        <div className="formDiv">
+            <div className="searchBar">
+                <form onSubmit={this.onSubmit}>
+                    Songs by: <input value={this.state.term} onChange={this.onChange} /> 
+                    <button>Search!</button>
+                </form>
+            </div>   
+        </div> 
 
         <div>
-            Term: {this.state.term}
-            <br></br>
-            <br></br>
-
             <div className="resultsDiv">
                 {this.state.results.map((result, index) => 
 
@@ -63,6 +66,8 @@ class App extends Component {
                 )}
             </div>
         </div>  
+
+        </div>
 
     </div>
     );

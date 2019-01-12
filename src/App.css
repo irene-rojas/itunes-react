@@ -11,6 +11,45 @@ a:link {
     text-decoration: none;
 }
 
+.parallax {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.formDiv {
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-self: center;
+    /* padding: 25px; */
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, auto);
+}
+
+.searchBar {
+    background: white;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 300px;
+    height: 25px;
+    align-items: center;
+    justify-self: left;
+    align-self: center;
+    /* text-align: center; */
+    border-radius: 5px;
+    /* margin: auto; */
+    margin-left: 50px;
+    margin-top: 25px;
+    display: inline-block;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    /* opacity: 0.8; */
+}
+
 .card {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 10px 20px rgba(0,0,0,0.2);
     width: 150px;
@@ -18,7 +57,7 @@ a:link {
     padding: 5px;
     background: white;
     border: 0.25px solid rgb(205, 205, 205);
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .zoom {
@@ -142,3 +181,7 @@ a:link {
 /* end 700px */
 
 /* <a href='https://www.freepik.com/free-vector/treble-clef-and-notes-neon-sign_3239201.htm'>Designed by Katemangostar</a> */
+
+/* <a href='https://www.freepik.com/free-vector/retro-microphone-with-grunge-music-concept_715259.htm'>Designed by Freepik</a> */
+
+/* <a href='https://www.freepik.com/free-vector/microphone-on-a-stand_792490.htm'>Designed by Freepik</a> */
