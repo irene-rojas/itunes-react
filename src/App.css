@@ -74,107 +74,164 @@ a:link {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     align-items: center;
-    justify-content: center;
+    align-self: center;
+    justify-self: center;
 }
 
 .grid0 {
     grid-column: 1/2;
     grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
 }
 
 .grid1 {
     grid-column: 2/3;
     grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
 }
 
 .grid2 {
     grid-column: 3/4;
     grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
 }
 
 .grid3 {
     grid-column: 4/5;
     grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
 }
 
 .grid4 {
     grid-column: 5/6;
     grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid5 {
     grid-column: 1/2;
     grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid6 {
     grid-column: 2/3;
     grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid7 {
     grid-column: 3/4;
     grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid8 {
     grid-column: 4/5;
     grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid9 {
     grid-column: 5/6;
     grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid10 {
     grid-column: 1/2;
     grid-row: 3/4;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid11 {
     grid-column: 2/3;
     grid-row: 3/4;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid12 {
     grid-column: 3/4;
     grid-row: 3/4;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid13 {
     grid-column: 4/5;
     grid-row: 3/4;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid14 {
     grid-column: 5/6;
     grid-row: 3/4;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid15 {
     grid-column: 1/2;
     grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid16 {
     grid-column: 2/3;
     grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid17 {
     grid-column: 3/4;
     grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid18 {
     grid-column: 4/5;
     grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+
 }
 
 .grid19 {
     grid-column: 5/6;
     grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+
 }
 
 } 
@@ -183,5 +240,3 @@ a:link {
 /* <a href='https://www.freepik.com/free-vector/treble-clef-and-notes-neon-sign_3239201.htm'>Designed by Katemangostar</a> */
 
 /* <a href='https://www.freepik.com/free-vector/retro-microphone-with-grunge-music-concept_715259.htm'>Designed by Freepik</a> */
-
-/* <a href='https://www.freepik.com/free-vector/microphone-on-a-stand_792490.htm'>Designed by Freepik</a> */
