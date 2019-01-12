@@ -79,7 +79,16 @@ h1 {
 }
 
 @media (min-width: 700px) {
+
+.masterDiv {
+    display: grid;
+    grid-template-columns: 75px 1fr 75px;
+    grid-template-rows: 1fr;
+}
+
 .resultsDiv {
+    grid-column: 2/3;
+    grid-row: 1/2;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);

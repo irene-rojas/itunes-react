@@ -21,7 +21,7 @@ class App extends Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        axios.get(`https://itunes.apple.com/search?term=${this.state.term.replace(/ /g,"+")}&entity=musicTrack&limit=20`)
+        axios.get(`https://itunes.apple.com/search?term=${this.state.term.replace(/ /g,"+")}&entity=musicTrack&limit=20&media=music`)
         .then(res => {
             this.setState({ 
                 results: res.data.results,
@@ -53,7 +53,7 @@ class App extends Component {
 
         </div> 
 
-        {/* <div className="masterDiv"> */}
+        <div className="masterDiv">
 
             <div className="resultsDiv">
                 {this.state.results.map((result, index) => 
@@ -73,7 +73,7 @@ class App extends Component {
                 )}
             </div>
 
-        {/* </div>   */}
+        </div>  
 
         </div>
 
