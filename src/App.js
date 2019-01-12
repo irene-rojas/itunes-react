@@ -31,7 +31,6 @@ class App extends Component {
         });
     }
 
-
   render() {
     return (
 
@@ -39,37 +38,42 @@ class App extends Component {
 
       <div className="App">
 
-        <div className="formDiv">
+        <div className="header">
+
+            <div className="title">
+                <h1>Search iTunes!</h1>
+            
             <div className="searchBar">
                 <form onSubmit={this.onSubmit}>
-                    Songs by: <input value={this.state.term} onChange={this.onChange} /> 
+                    Search by artist: <input value={this.state.term} onChange={this.onChange} /> 
                     <button>Search!</button>
                 </form>
             </div>   
+            </div>
+
         </div> 
 
-        <div>
+        {/* <div className="masterDiv"> */}
+
             <div className="resultsDiv">
                 {this.state.results.map((result, index) => 
-
-
                 <div className={`card grid${index} zoom`} key={result.trackId}>
                 <a href={result.trackViewUrl} target="_blank" rel="noopener noreferrer" key={index}>
                     <div>
                         <img src={result.artworkUrl100} alt="album art"/>
-                        <br></br>
+                            <br></br>
                         Song: {result.trackName}
                             <br></br>
                         Artist: {result.artistName}
-                        <br></br>
+                            <br></br>
                         Album: {result.collectionName}
                     </div>
                     </a>
                 </div>
-                
                 )}
             </div>
-        </div>  
+
+        {/* </div>   */}
 
         </div>
 
