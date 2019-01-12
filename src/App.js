@@ -34,6 +34,9 @@ class App extends Component {
 
   render() {
     return (
+
+    <div className="parallax">
+
       <div className="App">
 
         <div className="formDiv">
@@ -46,10 +49,6 @@ class App extends Component {
         </div> 
 
         <div>
-            {/* Term: {this.state.term}
-            <br></br>
-            <br></br> */}
-
             <div className="resultsDiv">
                 {this.state.results.map((result, index) => 
 
@@ -67,6 +66,8 @@ class App extends Component {
                 )}
             </div>
         </div>  
+
+        </div>
 
     </div>
     );
