@@ -7,7 +7,6 @@ class App extends Component {
     state = {
         term: "",
         results: [],
-        // empty array awaiting results
         gridSpace: 0
     };
 
@@ -16,7 +15,7 @@ class App extends Component {
         this.setState({
             term: event.target.value,
         });
-        console.log(this.state.term);
+        // console.log(this.state.term);
     }
 
     onSubmit = (event) => {
@@ -27,7 +26,7 @@ class App extends Component {
                 results: res.data.results,
                 gridSpace: this.state.gridSpace + 1
              });
-             console.log(this.state.results);
+            //  console.log(this.state.results);
         });
     }
 
@@ -42,13 +41,14 @@ class App extends Component {
 
             <div className="title">
                 <h1>Search iTunes!</h1>
-            
-            <div className="searchBar">
-                <form onSubmit={this.onSubmit}>
+
+                <form onSubmit={this.onSubmit} className="searchBar">
                     Search by artist: <input value={this.state.term} onChange={this.onChange} /> 
                     <button>Search!</button>
                 </form>
-            </div>   
+                <br></br>
+                Top 20 Results
+
             </div>
 
         </div> 
@@ -71,13 +71,19 @@ class App extends Component {
                     </a>
                 </div>
                 )}
+
             </div>
+            {/* end resultsDiv */}
 
         </div>  
+        {/* end masterDiv */}
 
         </div>
+        {/* end App */}
 
     </div>
+    // end parallax
+
     );
   }
 }
