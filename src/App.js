@@ -53,7 +53,7 @@ class App extends Component {
 
         </div> 
 
-        {/* <div className="masterDiv"> */}
+        <div className="masterDiv">
 
             <div className="resultsDiv">
                 {this.state.results.map((result, index) => 
@@ -73,7 +73,7 @@ class App extends Component {
                 )}
             </div>
 
-        {/* </div>   */}
+        </div>  
 
         </div>
 
