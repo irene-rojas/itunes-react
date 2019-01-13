@@ -20,7 +20,7 @@ class App extends Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        axios.get(`https://itunes.apple.com/search?term=${this.state.term.replace(/ /g,"+")}&entity=musicTrack&limit=20`)
+        axios.get(`https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=${this.state.term.replace(/ /g,"+")}&entity=musicTrack&limit=20`)
         .then(res => {
             this.setState({ 
                 results: res.data.results,
