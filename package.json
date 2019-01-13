@@ -2,7 +2,6 @@
   "name": "itunes-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://irene-rojas.github.io/itunes-react",
   "dependencies": {
     "axios": "^0.18.0",
     "gh-pages": "^2.0.1",
@@ -11,8 +10,6 @@
     "react-scripts": "2.1.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
