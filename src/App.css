@@ -78,7 +78,9 @@ h1 {
     transform: scale(1.05);
 }
 
-@media (min-width: 700px) {
+
+/* desktop */
+@media (min-width: 1200px) {
 
 .masterDiv {
     display: grid;
@@ -254,8 +256,6 @@ h1 {
 }
 
 } 
-/* end 700px */
-
-/* <a href='https://www.freepik.com/free-vector/treble-clef-and-notes-neon-sign_3239201.htm'>Designed by Katemangostar</a> */
+/* end desktop */
 
 /* <a href='https://www.freepik.com/free-vector/retro-microphone-with-grunge-music-concept_715259.htm'>Designed by Freepik</a> */
