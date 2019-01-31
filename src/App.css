@@ -1,9 +1,3 @@
-.App {
-  text-align: center;
-  margin: 0 auto;
-  font-family: "Helvetica Neue";
-}
-
 a {
     color: black;
 }
@@ -61,12 +55,11 @@ button {
     grid-template-columns: 20px 1fr 20px;
     grid-template-rows: repeat(3, auto) 5px;
     grid-row-gap: 20px;
-    font-family: "Avenir Next";
     text-align: center;
+    font-family: "Helvetica Neue";
 }
 
 .header {
-    background-color: white;
     grid-column: 2/3;
     grid-row: 1/2;
     padding-bottom: 20px;
@@ -85,6 +78,12 @@ button {
     justify-items: center;
 }
 
+.title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: white;
+}
+
 .card {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 10px 20px rgba(0,0,0,0.2);
     width: 300px;
@@ -94,14 +93,6 @@ button {
     border: 0.25px solid rgb(205, 205, 205);
     border-radius: 5px;
 }
-
-
-
-
-
-
-
-
 
 
 /* desktop */
@@ -180,7 +171,6 @@ button {
     grid-row: 1/2;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid5 {
@@ -188,7 +178,6 @@ button {
     grid-row: 2/3;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid6 {
@@ -196,7 +185,6 @@ button {
     grid-row: 2/3;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid7 {
@@ -204,7 +192,6 @@ button {
     grid-row: 2/3;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid8 {
@@ -212,7 +199,6 @@ button {
     grid-row: 2/3;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid9 {
@@ -228,7 +214,6 @@ button {
     grid-row: 3/4;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid11 {
@@ -244,7 +229,6 @@ button {
     grid-row: 3/4;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid13 {
@@ -252,7 +236,6 @@ button {
     grid-row: 3/4;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid14 {
@@ -260,7 +243,6 @@ button {
     grid-row: 3/4;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid15 {
@@ -268,7 +250,6 @@ button {
     grid-row: 4/5;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid16 {
@@ -276,7 +257,6 @@ button {
     grid-row: 4/5;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid17 {
@@ -284,7 +264,6 @@ button {
     grid-row: 4/5;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid18 {
@@ -292,7 +271,6 @@ button {
     grid-row: 4/5;
     align-self: center;
     justify-self: center;
-
 }
 
 .grid19 {
@@ -300,7 +278,6 @@ button {
     grid-row: 4/5;
     align-self: center;
     justify-self: center;
-
 }
 
 } 
