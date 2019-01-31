@@ -43,7 +43,7 @@ class App extends Component {
                 <h1>iTunes Search</h1>
 
                 <form onSubmit={this.onSubmit} className="searchBar">
-                    <strong>Search by artist: <input value={this.state.term} onChange={this.onChange} /></strong>
+                    <strong>Search: <input value={this.state.term} onChange={this.onChange} /></strong>
                     <br></br>
                     <button><strong>Search!</strong></button>
                 </form>
