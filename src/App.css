@@ -35,7 +35,6 @@ button {
     border-radius: 5px;
 }
 
-
 .title {
     background: white;
     grid-column: 2/3;
@@ -45,8 +44,6 @@ button {
     align-self: center;
     justify-self: center;
 }
-
-
 
 .zoom {
     transition: transform .2s;
@@ -63,7 +60,7 @@ button {
     display: grid;
     grid-template-columns: 20px 1fr 20px;
     grid-template-rows: repeat(3, auto) 5px;
-    grid-row-gap: 40px;
+    grid-row-gap: 20px;
     font-family: "Avenir Next";
     text-align: center;
 }
@@ -88,7 +85,15 @@ button {
     justify-items: center;
 }
 
-
+.card {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 10px 20px rgba(0,0,0,0.2);
+    width: 300px;
+    margin: 15px;
+    padding: 5px;
+    background: white;
+    border: 0.25px solid rgb(205, 205, 205);
+    border-radius: 5px;
+}
 
 
 
