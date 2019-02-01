@@ -136,6 +136,7 @@ h1 {
         justify-self: center;
     }
 
+    /* line 1 */
     .grid0 {
         grid-column: 1/2;
         grid-row: 1/2;
@@ -150,130 +151,139 @@ h1 {
         justify-self: center;
     }
 
+    /* line 2 */
     .grid2 {
-        grid-column: 2/3;
+        grid-column: 1/2;
         grid-row: 2/3;
         align-self: center;
         justify-self: center;
     }
 
     .grid3 {
-        grid-column: 4/5;
-        grid-row: 1/2;
-        align-self: center;
-        justify-self: center;
-    }
-
-    .grid4 {
-        grid-column: 5/6;
-        grid-row: 1/2;
-        align-self: center;
-        justify-self: center;
-    }
-
-    .grid5 {
-        grid-column: 1/2;
-        grid-row: 2/3;
-        align-self: center;
-        justify-self: center;
-    }
-
-    .grid6 {
         grid-column: 2/3;
         grid-row: 2/3;
         align-self: center;
         justify-self: center;
     }
 
-    .grid7 {
-        grid-column: 3/4;
-        grid-row: 2/3;
+    /* line 3 */
+    .grid4 {
+        grid-column: 1/2;
+        grid-row: 3/4;
         align-self: center;
         justify-self: center;
     }
 
+    .grid5 {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        align-self: center;
+        justify-self: center;
+    }
+
+    /* line 4 */
+    .grid6 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .grid7 {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        align-self: center;
+        justify-self: center;
+    }
+
+    /* line 5 */
     .grid8 {
-        grid-column: 4/5;
-        grid-row: 2/3;
+        grid-column: 1/2;
+        grid-row: 5/6;
         align-self: center;
         justify-self: center;
     }
 
     .grid9 {
         grid-column: 2/3;
-        grid-row: 2/3;
+        grid-row: 5/6;
         align-self: center;
         justify-self: center;
 
     }
 
+    /* line 6 */
     .grid10 {
         grid-column: 1/2;
-        grid-row: 3/4;
+        grid-row: 6/7;
         align-self: center;
         justify-self: center;
     }
 
     .grid11 {
         grid-column: 2/3;
-        grid-row: 3/4;
+        grid-row: 6/7;
         align-self: center;
         justify-self: center;
 
     }
 
+    /* line 7 */
     .grid12 {
-        grid-column: 3/4;
-        grid-row: 3/4;
+        grid-column: 1/2;
+        grid-row: 7/8;
         align-self: center;
         justify-self: center;
     }
 
     .grid13 {
-        grid-column: 4/5;
-        grid-row: 3/4;
+        grid-column: 2/3;
+        grid-row: 7/8;
         align-self: center;
         justify-self: center;
     }
 
+    /* line 8 */
     .grid14 {
-        grid-column: 5/6;
-        grid-row: 3/4;
+        grid-column: 1/2;
+        grid-row: 8/9;
         align-self: center;
         justify-self: center;
     }
 
     .grid15 {
-        grid-column: 1/2;
-        grid-row: 4/5;
+        grid-column: 2/3;
+        grid-row: 8/9;
         align-self: center;
         justify-self: center;
     }
 
+    /* line 9 */
     .grid16 {
-        grid-column: 2/3;
-        grid-row: 4/5;
+        grid-column: 1/2;
+        grid-row: 9/10;
         align-self: center;
         justify-self: center;
     }
 
     .grid17 {
-        grid-column: 3/4;
-        grid-row: 4/5;
+        grid-column: 2/3;
+        grid-row: 9/10;
         align-self: center;
         justify-self: center;
     }
 
+    /* line 10 */
     .grid18 {
-        grid-column: 4/5;
-        grid-row: 4/5;
+        grid-column: 1/2;
+        grid-row: 10/11;
         align-self: center;
         justify-self: center;
     }
 
     .grid19 {
-        grid-column: 5/6;
-        grid-row: 4/5;
+        grid-column: 2/3;
+        grid-row: 10/11;
         align-self: center;
         justify-self: center;
     }
