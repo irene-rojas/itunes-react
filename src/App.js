@@ -54,30 +54,25 @@ class App extends Component {
 
         </div> 
 
-        <div className="masterDiv">
-
-            <div className="resultsDiv">
-                {this.state.results.map((result, index) => 
-                <div className={`card grid${index} zoom`} key={result.trackId}>
-                <a href={result.trackViewUrl} target="_blank" rel="noopener noreferrer" key={index}>
-                    <div>
-                        <img src={result.artworkUrl100} alt="album art"/>
-                            <br></br>
-                        Song: {result.trackName}
-                            <br></br>
-                        Artist: {result.artistName}
-                            <br></br>
-                        Album: {result.collectionName}
-                    </div>
-                    </a>
+        <div className="resultsDiv">
+            {this.state.results.map((result, index) => 
+            <div className={`card grid${index} zoom`} key={result.trackId}>
+            <a href={result.trackViewUrl} target="_blank" rel="noopener noreferrer" key={index}>
+                <div>
+                    <img src={result.artworkUrl100} alt="album art"/>
+                        <br></br>
+                    Song: {result.trackName}
+                        <br></br>
+                    Artist: {result.artistName}
+                        <br></br>
+                    Album: {result.collectionName}
                 </div>
-                )}
-
+                </a>
             </div>
-            {/* end resultsDiv */}
+            )}
 
-        </div>  
-        {/* end masterDiv */}
+        </div>
+        {/* end resultsDiv */}
 
         </div>
         {/* end App */}
