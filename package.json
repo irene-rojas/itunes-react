@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://irene-rojas.github.io/itunes-react",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "eslint-utils": "^1.4.1",
     "gh-pages": "^2.0.1",
     "handlebars": "^4.1.0",
